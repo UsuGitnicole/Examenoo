@@ -1,0 +1,336 @@
+
+*position(). comprueba especie de array de los employee que saca los especificados
+deve debolver el empleado de la posicion 2.
+
+/class/employee[position()=2]
+/class/employee[position()<=3] sale el menor de 4
+
+______________________________________________________
+
+*last devuelbe el ultimo
+/class/employee[last()]
+/class/employee[last()-2] para retroceder num 2
+
+
+//salary@at="otro"
+
+Diapositiva 17:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+*self: obtener el propio elemento. (apuntandose al propio elemento)
+*child: obtiene los hijos de la etiqueta solo los hijos, no el elemento
+*parent: obtener el padre del elemento. 
+*ancestor: obtener el padre del padre
+*ancestor-or-self: obtener los ancestros o el mismo.
+*descendant: obtener descendientes de elementos
+*descendant-or-self:
+*following y preceding: queres los elementos a la izquierda o derecha 
+preceding derecha 
+
+el singing solo el nodo 
+followuing entro al nodo 
+
+following: ontener hermando de derecha y contenido de hermano 
+PRECIDING :
+
+predinfg-sibling : devuelbe solo los hermanos sin contenido.
+
+following -sibling : no recorre el contenido eñ los hemrmanos 
+
+attribute: obtener los atributos del elemento referenciado.
+
+!!!!!!!!!!!!restricion en xml path=[]
+
+
+busqueda 			 result 
+//employee[@id="001"]/attribute::*
+
+ejercicio 2 y 3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ejercicio2 
+
+2.1:::::::::::::::::::::::::::::::::::::::::::::::::::::
+Nombre de los módulos que se imparten en el Instituto:
+Aplicaciones web
+Gestión de bases de datos
+Lenguajes de marcas y sistemas de gestión de información
+Implantación de aplicaciones web
+
+
+//modulo/modulo_______________________________
+
+<nombre>Aplicaciones web</nombre>
+<nombre>Gestión de bases de datos</nombre>
+<nombre>Lenguajes de marcas y sistemas de gestión de información</nombre>
+<nombre>Implantación de aplicaciones web</nombre>
+
+Soluccion: //nombre/texto()
+
+
+2.2::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Nombre de los módulos del ciclo ASIR:
+Nota: Resuelva este ejercicio de dos formas distintas, en un único paso de búsqueda y en dos pasos de búsqueda.
+Gestión de bases de datos
+Lenguajes de marcas y sistemas de gestión de información
+Implantación de aplicaciones web
+
+
+//modulos/modulo[ciclo="ASIR"]/nombre__________________________________________
+
+<nombre>Gestión de bases de datos</nombre>
+<nombre>Lenguajes de marcas y sistemas de gestión de información</nombre>
+<nombre>Implantación de aplicaciones web</nombre>
+
+
+Soluccion: //modulo[ciclo="ASIR"]/nombre/text()
+Soluccion: //modulo[@id="0228"]/following::*/nombre/text()
+
+2.3:::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Nombre de los módulos que se imparten en el segundo curso de cualquier ciclo:
+Nota: Resuelva este ejercicio de dos formas distintas, en un único paso de búsqueda y en dos pasos de búsqueda.
+Aplicaciones web
+Implantación de aplicaciones web
+
+
+//modulos/modulo[curso="2"]/nombre____________________________________________-
+
+<nombre>Aplicaciones web</nombre>
+<nombre>Implantación de aplicaciones web</nombre>
+
+Soluccion: //modulo[curso="2"]/nombre/text()
+Soluccion: //nombre[../curso="2"]/text()
+Soluccion: //curso[.="2"]/../nombre/tetx()
+
+2.4:::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Nombre de los módulos de menos de 5 horas semanales:
+Nota: Resuelva este ejercicio de dos formas distintas, en un único paso de búsqueda y en dos pasos de búsqueda.
+Aplicaciones web
+Lenguajes de marcas y sistemas de gestión de información
+
+
+//modulos/modulo[horasSemanales<5]/nombre_____________________________________
+
+<nombre>Aplicaciones web</nombre>
+<nombre>Lenguajes de marcas y sistemas de gestión de información</nombre>
+
+Soluccion: //nombre[../horasSemanales<5]/text()
+Soluccion: //modulo[ciclo="SMR" or ciclo="DAM"]/nombre/text()
+Soluccion: //modulo[horasSemanales<5]/nombre/text()
+Soluccion: //horasSemanales[.5]/../nombre/text()
+
+2.5::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Nombre de los módulos que se imparten en el primer curso de ASIR:
+Nota: Resuelva este ejercicio de dos formas distintas, en un único paso de búsqueda y en dos pasos de búsqueda.
+Gestión de bases de datos
+Lenguajes de marcas y sistemas de gestión de información
+
+
+//modulos/modulo[curso="1"and ciclo="ASIR"]/nombre___________________________
+
+<nombre>Gestión de bases de datos</nombre>
+<nombre>Lenguajes de marcas y sistemas de gestión de información</nombre>
+
+
+2.6:::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+Horas semanales de los módulos de más de 3 horas semanales:
+Nota: Resuelva este ejercicio de dos formas distintas, en un único paso de búsqueda y en dos pasos de búsqueda.
+4
+5
+5
+
+
+//modulo[horasSemanales>3]/horasSemanales____________________________________
+
+<horasSemanales>4</horasSemanales>
+<horasSemanales>5</horasSemanales>
+<horasSemanales>5</horasSemanales>
+
+
+Ejercicio 3
+
+2.1:::::::::::::::::::::::::::::::::::::::::::::::::::::
+Nombre de los módulos del ciclo "Sistemas Microinformáticos y Redes" (en la expresión final no deben aparecer las siglas SMR):
+Aplicaciones web
+
+
+
+let $a :=5
+let $b :=3
+--el led baja 
+
+return $a||'y'||$b
+
+hacer 5 y 6 para devolver nodos en compleato
+
+
+
+8:uso let con funciones agragadas::::::::::::::..
+La llaves permiten obtener resultados
+
+
+
+let $i :=(1,2,3)
+return
+----<tupla><i>{$i}</i></tupla>
+<tupla><i>1 2 3</i></tupla>
+
+----for $i in (1,2,3)
+return 
+<tupla><i>{$i}</i></tupla>
+
+<tupla><i>1</i></tupla>
+<tupla><i>2</i></tupla>
+<tupla><i>3</i></tupla>
+
+----for $i in (1,2,3)
+let $i := (1,2,3)
+return 
+<tuple><i>{$i}</i><i>{$i}</i></tuple>
+
+<tuple><i>1 2 3</i><i>1 2 3</i></tuple>
+<tuple><i>1 2 3</i><i>1 2 3</i></tuple>
+<tuple><i>1 2 3</i><i>1 2 3</i></tuple>
+
+Para usar base x copiar ruta del documento ej: for $b in doc("C:\Users\nayar\Downloads\bib.xml")//
+
+----for $b in doc("C:\Users\nayar\Downloads\bib.xml")//book
+let $c :=$b/autor
+return <book>{$b/title, <count>{count($c)}</count>}</book>
+
+<book><title>TCP/IP Illustrated</title><count>0</count></book>
+<book><title>Advanced Programming in the UNIX Environment</title><count>0</count></book>
+<book><title>Data on the Web</title><count>0</count></book>
+<book><title>The Economics of Technology and Content
+for Digital TV</title><count>0</count></book>
+
+
+CLAUSULA WHERE:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
+
+
+----for $b in doc("C:\Users\nayar\Downloads\bib.xml")//book
+where $b/price <10000
+return $b/title
+
+<title>TCP/IP Illustrated</title>
+<title>Advanced Programming in the UNIX Environment</title>
+<title>Data on the Web</title>
+<title>The Economics of Technology and Content
+for Digital TV</title>
+
+----for $b in doc("C:\Users\nayar\Downloads\bib.xml")//book
+let $c := $b//author
+where count($c)>2
+return $b/title
+
+<title>Data on the Web</title>
+
+
+funcion data($b/title) para quitar etiquetas y text() tambien para quitar comentarios en path
+String ($b/title)  para extraer el texto.
+
+
+
+
+
+xsl-fol: 
+
+las etiquetas tienen que ver con maquetado
+fo es la unidad de diseño de objeto de formateo
+
+no hace falat table 
+
+
+
+
+Apuntes 2::::::::::::::::::::::::::::::::
+
+descargar parser xslt 
+
+FOP de APACHE______________
+
+es un procesador de objetos de formato  impuslado por un formtateador independiente de salida.
+
+app que lee un arbol de objetos de formato fo y representa las paginas resultantes en una salida.
+
+distribuimos el codigo en páginas, 
+
+Objetivos de FOP________________
+
+los objetivois del proyecto apache fop son entregar un formatedor xsl-fo a pdf que cumpla al menos con el nivel de conformidad y que cumpla con la especificacion de formato de documento portatil de noviembre d eadobe systems
+
+layout-master: especifica la estructura de a página
+
+<?xml version="1.0">raiz instrucciones para el parser
+fo: region-body-margin=lin: especifica un margen del body modleo d ecajas 
+fo:block: especifica un parrafo que uestra un texto o elemento
+
+
+comando en windows para ejeutar fop en windows: fop.bat 
+
+
+C:\Users\nayar\Downloads\fop-2.8-bin\fop-2.8\fop
+
+fop.bat -fo XSL-FO/Ej01.fo -pdf XSL-FO/Ej01.pdf
+
+1º CASO_____tiene que salir el siguiente mensaje:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+C:\Users\nayar\Downloads\fop-2.8-bin\fop-2.8\fop>fop.bat -fo XSL-FO/Ej01.fo -pdf XSL-FO/Ej01.pdf
+abr 19, 2023 4:09:38 P. M. org.apache.fop.events.LoggingEventListener processEvent
+INFO: Rendered page #1.
+	*Nos crea un archivo pdf
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+2ºCASO___tiene que salir::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+C:\Users\nayar>cd C:\Users\nayar\Downloads\fop-2.8-bin\fop-2.8\fop
+
+C:\Users\nayar\Downloads\fop-2.8-bin\fop-2.8\fop>fop.bat -xml XSL-FO/Ej02.xml -xsl XSL-FO/Ej02.xsl -foout XSL-FO/Ej02.fo
+	*Nos crea un archivo fo
+	*y creamos el archivo pdf de Ej02
+
+C:\Users\nayar\Downloads\fop-2.8-bin\fop-2.8\fop>fop.bat -fo XSL-FO/Ej02.fo -pdf XSL-FO/Ej02.pdf
+abr 19, 2023 4:32:42 P. M. org.apache.fop.events.LoggingEventListener processEvent
+INFO: Rendered page #1.
+
+C:\Users\nayar\Downloads\fop-2.8-bin\fop-2.8\fop>
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+CASO3________El mismo paso sin generar el archivo intermedio :::::::::::::::::::::::
+fop.bat -xml XSL-FO/Ej02.xml -xsl XSL-FO/Ej02.xsl -pdf XSL-FO/Ej02.pdf
+
+
+fop.bat -xml XSL-FO/Ej02.xml -xsl XSL-FO/Ej02.xsl -foout XSL-FO/Ej02.fo
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+ej 1, 2 y 3 
+
+
+
+
+
+-Esquema________________
+xml				| 
+	-> xsl-fo ->pdf	|
+xslt 				|
+________________________|
+

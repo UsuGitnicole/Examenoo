@@ -1,0 +1,292 @@
+::::::::::::::::::¿Que es la programación orientada a objetos?::::::::::::::::::::
+
++Es un modelo totalmente diferente al metodo clásico de programación.
+
+	-utiliza objetos para resolver problemas y generar programas y apps.
+
++Aumenta la modularidad(Modificar los factores que intervienen en un proceso)
+de los programas y la reutilización de los mismos.
+
++Se diferencia de la programación clasica porque utiliza técnicas nuevas como el
+polimorfismo(capacidad que tienen los objetos de una clase en ofrecer respuesta
+distinta e independiente en función de los parámetros), el encapsulamiento o la 
+herencia.
+
+:::::::::::::::::::::::::::¿Que es una clase?::::::::::::::::::::::::::::::::::
+
++Una clase es una plantilla que define la forma de un objeto.
+
++En la clase se definen las propiedades de los objetos de esa clase (atributos)
+y el comportamiento de los mismos (metodos).
+
++Las clases pueden encapsular información sobre vehículos u otos.
+la clase se puede llamar veiculos y almacenará atributos como pasajeros, marca,
+etc.
+
+**class vehiculo{
+	int marca;
+	int pasajeros;
+}
+
++La def de una clase crea un nuevo tipo de dato (es solo una descripción no crea
+ objeto). 
+
+**vehiculo minivan=new Vehiculo();  objeto de tipo vehiculo.
+
++Cada objeto de tipo vehiculo contendrá su copia propia de las variables.
+para poder acceder a estas variables usaremos.
+
+minivan.pasajeros=18; 
+
+::::::::::::::::::¿Que es un objeto?¿Como se crea?:::::::::::::::::::::::::::::::
+
++Es una instancia(se llama instancia a todo objeto que derive de algún otro)
+ de una clase.
+
++Se crean un objeto 
+	declarando la variable para el objeto con el tipo de la clase.
+	se reserva espacio en memoria usando new.
+
+		vehiculo minivan; //declara objeto referencia.
+		minivan=new vehiculo(); //asigna un objeto a vehiculo.
+
+:::::::::::::::::::¿Qué es un metodo?::::::::::::::::::::
+
++Segmentos de codigo que realizan operaciones sobre las variables de una clase.
+permiten que se comuniquen las clases.
+
++Un metodo puede devolver cero o un valr desde donde fue llamado, sino devuelve 
+nada en return-type se indica void!!!!!!!!!!.
+
++En caso de que devuelvan true o false se indica el tipo de dato del dato que va
+a devolver. 
+
+Pasos de parametros::::::::::::::::::::::::.
+
++Es posible enviar uno o mas valores a un método.
+el valor al que se le pasa al método se le llama "argumento".
+
++Dentro del método, la variable que recibe el valor del argumento se le
+ llama parámetro.
+
++Los parámetros solo existen dentro del método.
+
+::::::::::::::::::::¿Qué son los constructores?::::::::::::::::::::::::::::::
+
+
++Un constructor inicializa un objeto cuando este es creado.
+
++Tienen el mismo nombre que la clase y es similar a un método.
+
++No devuelven valores. Se usan para inicializar las variables de instancia 
+definidas en la clase.
+
+Constructores parametrizados::::::::::::::::::::::::::::
+
++Muchas veces es necesario pasarle parámetros al constructor.
+
+::::::::::::::::::::::¿Qué es un recolector de basura?:::::::::::::::::::::::::
+
++Los objetos se crean dinámicamente cuando se utiliza el operador "new".
+
++El recolector de basura en java, libera automáticamente la memoria de los objetos 
+que dejan de ser utilizados. 
+
++Está memoria puede ser utilizada posteriormente para alojar a otro objeto.
+
+::::::::::::::::::::::::::¿Qué es el método Finalize?:::::::::::::::::::::::::::
+
++EL metodo finalize() puede ser utilizado para asegurarnos que un objeto 
+finaliza de manera limpia.
+
++Al usarlo la máquina virtual de java llamará a este metodo antes de eliminar 
+definitivamente el objeto y ejecutará el código existente dentro.
+
+:::::::::::::::::Tipos de acceso a los miembros de una clase:::::::::::::::::::: 
+
++Especificamos e nivel de acceso que tendrá ese atributo o metodo.
+
++Existen varios niveles de acceso como:
+	-Private: puede ser accedido solamnete desde los metodos internos se 
+	su propia clase.
+
+	-Public:puede ser accedido desde cualquier otra clase que necesite usarlo.
+
+	-Protegido: el acceso puede ser igual al de acesso privado. No obstante para 
+	las subclases o clases del mismo paquete serán publicos.
+
+	-No específios: los miembros no etiquetados podrán ser accedidos por 
+	cualquier clase perteneciente al mismo pack.
+
++Cuando una clase han sido implantada como private es encesario implementar los 
+metodos getter y setter para permitir el acceso y manipulación fuera de la clase 
+(Encapsulamiento)
+
+Referencias y autoreferencias::::::::::::::::::::::::::::::::
+
++Para que los constructores puedan llamarse entre si se utilizan autoreferencias.
+
++Si operamos desde fuera de un objeto es posible usar sus elementos (atributos y 
+métodos) usando la referncia al objeto.
+
++ Si operamos desde la definición de una clase, podemos usar sus elementos sin 
+referencia o usando this como referencia.
+
+metodos, atributos de dsitancia y de clase:::::::::::::::::::::::::::::::::
+
++Metodos y atributos de instancia: aquellos utilizados por la instancia.
++Metodos y atributos de clase: aquellos omunes para una clase, 
+
+::::::::::::::::::::::::::::Metodos y atributos estaticos::::::::::::::::::::::::::::::::
+
++Un metodo static no tiene ref this.
+
++Un metodo static no puede acceder a miembros que no sean satic.
++Un metodo no static puede aceder a miembros static y no static.
++no es necesario instanciar un objt para poder usarlo.
+
+
+Un Atributo static:::::::::::::::::::::::
+
++No es específico de cada objeto. Solo hay una copia del mismo y su valor es 
+compartido por todos los objetos de la clase.
+
++Podemos considerarlo como una variable global a la que tienen acceso todos los
+ objetos de la clase. 
+
++Existe y puede utilizarse aunque no existan objetos de la clase. 
++Para d¡poder utilizarlo escribir """"""NOmbreclase.metodo"""".
+
+
+::::::::::::::Para sacar solo 3 num decimales implementar ::::::::::::
+											::::
+		double precio=2,3245						::::
+											::::
+		String codprecio=String.format("%3f", precio)		::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+
+
+
+:::::::::::::::::::::¿Que son los Constructores de copias?:::::::::::::::::::::
+
++Inicializa un objeto reproduciendo los valores de otro objeto distindo de la
+ misma clase. 
+
++Al usar el constructor copia solo se reproducirán los miembros del objeto.
+ generate getter y setter  source > generate 
+
+Comparación de objetos:::::::::::::::::::::::::
+
+== para ver si dos onjetos iguales se guardan en el mismo sitio de memroia
+se comparan con equas() dentro de la clase.
+
+Sobrecarga metodos:::::::::::::::::::::::::::...
+
+Paso d emparaetros por valor::::::::::::::::...
+
+num barianble parametros : opcionasl de buscar :::::::::::::::::
+
+control+space me dice ls contrctores
+p.     toString(); == sysout(p);
+
+
+
+
+public Strting toString (){
+return "prerro" +nomber
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+objetos(
+
+metodos(constructores( getters, setter, copia))
+static
+permisos
+variables
+null 
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3 clases de ejercicios y explicaciones
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

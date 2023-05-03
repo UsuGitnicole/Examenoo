@@ -1,0 +1,344 @@
+Son 3 ejes de ola misma tecnologia.	
+											
+xslt: 
+xpath: lenguaje sencillo que permite accder a partes de un docuemntlo cmlx
+	parte del lenguaje sxl
+	diseñado para 
+ara hacer búsquedas
+xsl-fo: 
+xquery: leng 
+
+
+el nodo padre
+
+atributos con @nombre
+
+1	2	3	4	5	
+0	1	2	3	4
+
+
+
+
+REPETIR 10 veces
+entrada num
+	
+	1
+	0
+
+mosytrar
+ 	vector[]
+
+1-2+1
+
+/ies/nombre//nombre
+
+/ies/web/text()
+//web/text()
+
+ej 3
+/ies/ciclos/ciclo/nombre/text()
+
+
+
+1-4
+/ies/ciclo/@id
+
+//decretoTitulo/@anio
+
+1-6
+//ciclo[condicion] if (condicion)
+//ciclo[grado="Medio"]
+Soluccion 2:usar . y ..
+//grado[.="Medio"]/..
+
+1-7
+//ciclo[grado="Superior"]/nombre
+//grado[.="Superior"]/../nombre
+//nombre[..//grado="Superior"]
+
+
+1-8
+//ciclo[decretoTitulo @anio<2010]/nombre/text()
+//decretoTitulo[@anio<2010]/../nombre/text()
+//nombre[../decretoTitulo/@ani2010]/text()
+@anio[.<2010]/../../nombre/text()
+
+1-9
+//ciclo[decretoTitulo/@anio=2010 or @anio=2008]/nombre/text()
+//nombre[../decretoTitulo=2008 or @anio=2010]/text()
+//@anio[.=2010 or .=2008]/../../nombre/text()
+
+
+
+
+EJERCICIO 3-3::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::......
+
+
+
+3-3
+//ciclo[grado="Superior"]/nombre/text()
+1º) //ciclo[grado="Superior"]/@id ASIR,DAW
+2º) //modulo[ciclo="ASIR""DAW"]/nombre/text()
+//modulo[ciclo=//ciclo[grado="Superior"]/@id]/nombre/text()
+
+3-4
+//decretoTitulo[@año="2008"]/../@id => SMR
+modulos del ciclo SMR
+//modulo[ciclo="SMR"]/nombre/text() => App web
+sustituyendo la primera en la segunda
+//modulo[ciclo=//decretoTitulo[@año]]
+
+flwor: para recorrer el archivo, inidca que elementos vamos a seleccionar
+at: permite enumera los resultados
+let: declarar variables a las que les asignan valores
+where: permite introduir condidiciones
+
+Para comentarios en base x: (:comentario:)
+
+
+
+for $b in doc("C:\Users\nayar\Downloads\bib.xml")//book
+let $c := $b//author
+where count($c)>2
+return $b/title
+
+
+for $t in doc("C:\Users\nayar\Downloads\bib.xml")//title
+order by $t 
+return $t
+
+
+for $a in doc("C:\Users\nayar\Downloads\bib.xml")//author
+order by $a/last descending, $a/firsts descending						
+return $a
+
+
+let $b := doc("C:\Users\nayar\Downloads\bib.xml")//book
+for $t in distinct-values($b/title)
+let $a1 := $b[title=$t]/author[1]
+order by $a1/last, $a1/first
+return $b/title
+
+
+
+for $a in doc("C:\Users\nayar\Downloads\bib.xml")//author
+return 
+<author>{string ($a/first),"",string($a/last)}</author>
+
+
+*text() no funciona en atributos, para eso utilizamos data($b) para contenido de 
+elementos o String($b) para cadenas
+    
+
+
+<html>
+  <head>
+    <body>
+      <h1>Titulos</h1>
+      <ul>
+        {
+          for$var in doc ("C:\Users\nayar\Downloads\bib.xml")//title
+          return <li>{string($var)}</li>
+        }
+      </ul>
+    </body>
+  </head>
+</html>
+
+
+
+xml link: es hacer referencia ha un enlace  externo
+
+
+::::::::::::::::::::::::::::.:::EJERCICIOS XQUERY:::::::::::::::::::::::::::::::::::
+
+1:::.
+for $t in doc("C:\Users\nayar\OneDrive\Escritorio\Ejercicios xml\Xquery.xml")//titulo
+order by $t 
+return $t
+
+2:::.
+for $t in doc("C:\Users\nayar\OneDrive\Escritorio\Ejercicios xml\Xquery.xml")//libro
+let $c :=$t[titulo=$t]/@anyo
+return $t
+
+3:::. Listar los libros cuyo precio sea 65.95
+
+
+ {mensaje.setText("DEPARTAMENTO ERR NEO.");} 
+	       catch (IOException ex2) {
+	    	  
+
+
+
+ {String text2 = "DEPARTAMENTO ERR NEO.";
+			mensaje.setText(text2);} 
+	       catch (IOException ex2) {
+
+variable local dentro de un metodo diferencia 
+
+
+
+se produce match cuado ele,emto este dentro de xpath encuentra elemento
+
+xsl es un documento xml con caracteristicas especiales.
+
+
+
+	* xmlns:xsl="http://www.w3.org/1999/XSL/Transform"> ==> raiz de lal hojas de transformacion
+	* <xsl:template match="/"> ==> nodo intermedio que es hijo del raiz. (pantillas)
+	* <xsl:apply-template match="/"> (aplicar una plantilla)
+	* match="/" donde se indica que parte del arbol xml va a modificar 
+	* <xsl:for-each select="catalog/cd"> ==> 
+	* select="catalog/cd"> ==> seleccionar los nodos del arbol del catalogo
+	
+
+1. Listar el título de todos los libros.
+
+fro $a in doc(...xml)//titulo
+return $a
+
+fro $a in doc(...xml)/bib/libro/titulo ==ruta absoluta
+return data($a)
+return String($a)
+
+2. Listar año y título de todos los libros, ordenados por el año.
+
+for $a in doc (...xml)//libro
+let $b :=$a/@anyo
+order by  
+return "Tiulo:" || $a//titulo || "anyo"||$b
+ 
+for $a in doc (...xml)//libro
+order by $a/@anyo
+return "Tiulo:" || $a || "anyo:"||$/anyo
+
+3. Listar los libros cuyo precio sea 65.95
+
+for $a in doc (...xml)//libro
+let $l := $a/precio
+where $l =65.95
+return $a/titulo
+
+for $a in doc (...xml)//libro
+where $a/precio=65.95
+return <libro> {$a/titulo} </libro>
+
+for $a in doc (...xml)//libro[precio=65.95]
+
+4. Listar los libros publicados antes del año 2000
+
+for $a in doc(...xml)//bib/libro
+where $a/@anyo < 2000
+return $a
+
+for $a in doc(...xml)//bib/libro
+where nummber ($a/@anyo)<2000
+return $a
+
+5. Listar año y título de los libros publicados por Addison-Wesley después del año 1992.
+
+for $a in doc(...xml)//libro
+let $b := $a/@anyo
+where $a/editorial ="Alison wesley"
+and $a/@anyo >1992
+return $a/titulo || ""|| $b
+
+for $a in doc(...xml)//libro
+let $b := $a/@anyo
+where $a/editorial ="Alison wesley"
+and $a/@anyo >1992
+return $a/titulo || ""|| a/@anyo
+
+for $a in doc(...xml)//bib/libro
+where $a/@anyo < 2000
+return $a
+
+6. Listar año y título de los libros que tienen más de un autor.
+
+for $a in doc(...xml)//libro
+let $a :=count($b/author)
+where $a>1
+return String ($b/titulo) || ":" || data($b/@anyo)
+
+for $a in doc(...xml)//libro
+where $b/count (author)>1
+return <libros{String ($b/@anyo)}</libros>
+
+7. Listar año y título de los libros que no tienen autor.
+
+for $a in doc(...xml)//libro
+where $a/not(author)
+return concat ($a/@anyo,"-", $a/titulo)
+
+where count($a/author)=0
+
+where empty($a/author)
+
+where $a/author=empty
+
+8. Mostrar los apellidos de los autores que aparecen en el documento, sin repeticiones, ordenados alfabéticamente.
+
+for $a in distinct-values (doc(...xml)//apellido)
+order by $a ascending 
+return $a
+
+9. Por cada libro, listar agrupado en un elemento <result> su título y autores
+
+let $result := doc("...xml")/bib/libro/titulo | doc("...xml")/bib/libro/autor
+return 
+<result>{String ($result)}</result>
+
+10. Por cada libro, obtener su título y el número de autores, agrupados en un elemento <libro>
+
+for $libro in doc ("...xml")//libro
+let $autores :=$libro/autor
+return <libro>{$libro/titulo, <autores>{count($autores)}</autores>}
+</libro>
+
+11. Generar un documento html con un encabezado que diga “Listado de libros” seguido de una 
+tabla de 3 columnas, en la que se muestre el título, editorial y precio de cada libro. La tabla deberá tener bordes y la primera fila tendrá un formato especial con los nombres de las columnas. Las columnas de título y editorial irán alineadas a la izquierda, y el precio a la derecha. 
+
+<html>
+
+<body>
+<h1 style="text-aling: center "> listado de libros </h1>
+<center>
+<table style="border: 1px solid">
+{
+for $x in doc(...xml)/bib/libro
+order by $x 
+return <tr>
+
+<tr>
+<th>titulo</th>
+<th>editorial</th>
+<th>precio</th>
+</tr>
+}
+</body>
+</html>
+
+xsl: template ==> pantilla 1º instruccion para plantilla, aplico en el nodo que quiero la plantilla. match a l nodo extraerlo y aplicar pantilla
+
+match ==> para indicar a que nodo querecmos acceder
+
+xsl:apply-template ==> para aplicar la plantilla pero conservar los nodos hijos. se almacena en el padre para conservar los hijos. no segiur sustituyendo que hay dos plantillas con hijos.
+
+
+
+
+
+
+
+
+COBOLT lenguaje de programacion.
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,73 @@
+:::::::::::::::SENTENCIA FOR-EACH:::::::::::::::::::::::::::
+for para saber cuantas veces que quiero que se repita
+break saltar a otro sitio del programa (es decir termina).
+continue salta a la siguiente operacion del bucle
+
+%div==0
+primo=false
+!= significa que mientras num sea != distinto a num1m num!=num1.
+se puede hacer para comparar numeros de un rango con if (nota>=0 && nota<=10)
+NOTA MENTAL::repasar if y else la sintaxis sobre todo y do while.
+integer max_value
+
+programa que lee secuencia de notas 0-10. for 
+termina al introducir -1  while
+cuenta el n de suspensos, aprobados, notables y sobresalientes if
+
+
+int nota, notasalu=0, 
+
+for (num=0,num<10,num++)
+
+
+
+
+
+
+
+leer 100 num y contar cuantos son pares o impares y nulos
+
+21-22 noviembre.
+
+for
+
+
+
+
+
+
+
+
+leer notas de una clase y contar el num de aprobados.
+
+
+
+
+
+38 do
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

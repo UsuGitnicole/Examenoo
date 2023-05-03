@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Registro N.U.</title>
+  <style>
+  body{
+    background-image: url(img3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  fieldset{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-align: center;
+  }
+  </style>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>Registro</legend><br>
+      <label for="usuario">Nombre usuario</label><br>
+      <input type="text" id="usuario" name="usuario"><br>
+      <br>
+      <label for="contraseña">Constraseña</label><br>
+      <input type="text" id="contraseña" name="contraseña"><br>
+      <br>
+      <label for="repcontra">Repetir contraseña</label><br>
+      <input type="text" id="repcontra" name="repcontra"><br>
+      <br>
+      <label for="direcc">Dirección de email</label> <input type="text" id="direcc" name="direcc"><br>
+      <p>Sexo:</p><input type="radio" id="fem" name="sexo" value="sex_fem"> <label for="sexo">Femenino</label> <input type="radio" id="mascu" name="sexo" value="sex_mascu"> <label for="sexo">Masculino</label><br>
+      <br>
+      <label for="fecha_na">Fecha de cumpleaños</label> <input type="datetime-local" id="fecha_na" name="fecha_na"><br>
+      <br>
+      <label for="ciudad">Ciudad</label><br>
+      <input type="text" id="ciudad" name="ciudad"><br>
+      <br>
+      <label for="pais">País</label><br>
+      <input type="text" id="pais" name="pais"><br>
+      <br>
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
+</body>
+</html>

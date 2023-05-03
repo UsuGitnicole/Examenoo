@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Trabajando Formularios </title>
+  </head>
+
+<body>
+  <form action = "/action_page.php">
+    <fieldset>
+      <legend> Datos del Usuario </legend>
+      <label for="fname"> Usuario </label>
+    <input type = "text"  id ="fname" name="fname" placeholder="Nombre y apellidos" ><br>
+ <form>
+      <input type="radio" id ="usuario" name="usuarios" value="1">
+        <label for ="usuario">Alumno</label><br>
+      <input type ="radio" id ="usuario2" name="usuarios" value ="2">
+        <label for ="usuario2">Profesor</label><br>
+      </fieldset>
+    </form>
+<form cation ="/action_page.php">
+  <fieldset>
+    <legend> Dónde se produce </legend>
+     <input type="radio" id="departamento" name="produce" value="1"
+      <label for="departamento">Todo el departamento</label><br>
+     <input type="radio" id="aula" name="produce" value="2"
+      <label for="aula">Todo el aula </label><br>
+     <input type="radio" id="equipo" name="produce" value="3"
+      <label for="equipo">Sólo en un equipo</label><br>
+
+    <label for="fname">Identifica el dpto,aula o equipo</label>
+    <input type="text" id="fname" name="fname"><br><br>
+</fieldset>
+ <fieldset>
+   <legend>Información sobre la incidencia</legend>
+    <label for="fname">Descripción de la incidencia </label><br>
+     <textarea name="message" placeholder="Describe el problema con estilo"
+     rows="10" cols="100"></textarea><br><br>
+     <label for="css">Nivel de urgencia:</label><br>
+     <input type="radio" id="alto" name="fav_radio" value="RAD1">
+     <label for "alto">Alto</label><br>
+     <input type="radio" id="medio" name="fav_radio" value="RAD2">
+     <label for="medio">Medio</label><br>
+     <input type="radio" id="bajo" name="fav_radio" value="RAD3">
+     <label for="bajo">Bajo</label><br>
+
+     <label for="css">Me gustaría ser avisado por email cuando se resuelva la incidencia</label>
+    <input type="checkbox" id="pepe" name="formulario" value="boat">
+   </fieldset>
+ </form>
+   </datalist>
+   <input type="submit">
+    </body>
+</html>

@@ -1,0 +1,28 @@
+Entidades y relaciones fuertes/debiles::::::::::::::::::::::::::::::::
+
++Las entidades débiles: son aquellas cua. existencia de una ocurrencia 
+depende de que exista una cierta ocurrencia de otra entidad.
+
++Las relaciones de dependencia son las que se proerte y las debiles.
+ducen entre las entidades 
+
++Existen 2 tipos:
+	-en existencia: la entidad debil solo depende de la fuerte solo oara existir
+	-en identificacion: la entidad necesita de la fuerte para existir y para identificarse.
+
+
+
+
+
+
+
+
+
+		
+
+3414/2	1707/2	85
+14		10
+014			1
+0
+
+

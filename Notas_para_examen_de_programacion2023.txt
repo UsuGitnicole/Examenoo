@@ -1,0 +1,127 @@
+NOTAS MENTALES:
+
+	*Metodo substring para obtener una subcadena
+	*Para introducir un acadena de texto por el usuario 
+		Scanner ent=new Scanner(System.in);
+		cadena=ent.next();
+
+	*Para crear un vector de cadena de texto 
+		char cadenas[]=cadena.toCharArray();
+	*Para rellenar un array con un valor de una variable de una posicion de un ciclo	       
+		 int vector[] = new int[n];
+        	 for(int i = 0; i < vector.length; i++)
+       	  {
+             vector[i] = m;
+        	 }
+
+	*Para pasar un vector por parametros
+		metodo(vector);
+	
+	*Para delarar un vector 
+		private int[] vector;
+
+	*Solos el == para las sinatis de programacion no para variables 
+		if (num==max) good
+		num==max bad
+
+	*Podemos guardar en un array aparet los valores del array y con otro relleno de array   
+	relalizar la operacion.
+		  for (i = 0; i < numeros.length; i++) {
+          	  System.out.print("numeros[" + i + "]= ");
+      	     	 numeros[i] = sc.nextInt();
+        		}
+		 for (i = 0; i < numeros.length; i++) {
+    	        if (numeros[i] > 0) {
+                pos+=numeros[i];
+      	      } 
+	
+	*IMPORTANTE EL ORDEN DE LOS VALORES Y VARIABLES!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	*Para poder crear un array que contenga todos los valores desde a(num usu) hasta b(num usu)
+		//creacion de vector para cantidad de valores deve tener
+			int vector[]=new int[a-b+1]
+		//Relleno de vector posicion mas numero por el que empieza
+
+			for (int i=0; i<vector.length;i++) {
+        		vector[i]=p+i;
+   		 	}
+
+	*Para sacer el max y el min de una serie de numeros en un rango
+		int min=Integer.MAX_VAULE;
+		int max=Integer.MIN_VALUE;
+			//comparamos el num si es menor que min(max) y si es mayor que max(min)
+
+	*Constructor con numeros aleatorios
+		//creacion de vector
+		int vector[];
+		//Reservo memoria parra el array
+		vector=new int[10];
+		//generamos numero entre 0 y 10
+		for (int i = 0; i < TOTAL_NUMEROS; i++) {
+			// Genero un número entre 0 y 99 y le añado 1 para que esté entre 1 y 100
+			vector[i] = random.nextInt(100)+1;
+		}
+
+	*Como utilizar Math.random()
+		//metodo para producir numeros aleatorios ya sea si estan en un rango incluyendo o
+		excluyendo
+		var x = Math.random()*(max - min)+min;
+
+	*Formula para introducir num y saber en que posicion esta 
+		//metodo con int para num random
+		int var=(int) Math.random(10-1)+1);
+		for(int i = 0; i < vector.length; i++){
+          		if(vector[i]==var) {
+        		  System.out.println("Aparece en la posicion" +i);
+         		 }
+
+	*Introducir valores a un array desde el teclado
+	 System.out.print("Introduce numeros: ");
+        for(int i = 0; i < alturas.length; i++)
+         {
+            alturas[i] = entrada.nextIntln();
+         }
+        
+	*Para comparar dos arrays y ver si son iguales se utiliza
+		if(Arrays.equals(v1, v2))
+        {
+		System.out.println("Son iguales");
+        }else{
+            System.out.println("No son iguales");
+        }
+
+	*Para ordenar un vector con numeros aleatorios utilizamos 
+		Arrays.sort(vector);-
+
+Metodos para clase de caracteres:_________________________________________
+	*Comprobar si el valor del carácter es una letra o no
+		Character.isLetter()
+
+	*Comprobar si el valor del caracter es un digito o no
+		Character.isDigit()
+	
+	*Comprobar si el valor del caracter esta en Mayusculas o no
+		Character.isUpperCase();
+
+	*Comprobar si el valor del caracter esta en minusculas o no
+		Character.isLowerCase();
+
+	*Para convertir a Mayusculas valores toUpperCase() y minusculas toLowerCase,
+
+
+lea una cadena y que nos diga si la cadena contiene numericos o no
+
+
+
+
+atributos /@nombre
+/ies/dam/profesor/@nombre
+
+
+
+pedir 2 y 4 crear un array de tamaño 4 y escribir 3 en sus posiciones y lo muestre
+
+
+
+
+vender fruta y contando cuantas piezas de fruta tienes y contar cuantas piezas de fruta e vendido

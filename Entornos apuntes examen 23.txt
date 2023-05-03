@@ -1,0 +1,57 @@
+1º solo pueden contener info en españos
+2º perfectivo
+3º working, staging, repository
+4º todas las anteriores
+5º git fetch+git merge
+6º todas las anteriores
+7º tracked, untracked, ignored
+8º import java.swing.JPanel;
+9º se deben usar entre metodos
+10º aceptan markdown
+11º limpieza de codigo
+12º las ordenes de salto complican el codigo
+13º ?
+14º import java.awt.Frame
+15º tracked, untracked, ignored
+16º git config --global user.name
+17º ninguno de los anteriores
+18º correctivo
+19º todas anteriores
+
+
+
+git init
+git remote add origin url
+git add .
+git commit -m "comentario"
+git checkout -b test
+git alias.cm 'commit -m'
+git checkout master
+git remote -v
+git branch -d test
+git push origin master
+git diff calc.java
+git config --global -list 
+
+
+
+git init
+git remote -v
+git remote add origin url
+git add eja.java |git add ejb.java
+git status
+git commit -m "COMENTARIo"
+git checkout -b test
+git branch -a
+git checkout master
+git branch -d test
+git push origin master
+git log 
+git config --global -list
+
+
+
+
+
+
+

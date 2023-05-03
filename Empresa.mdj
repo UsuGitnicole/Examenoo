@@ -1,0 +1,212 @@
+{
+	"_type": "Project",
+	"_id": "AAAAAAFF+h6SjaM2Hec=",
+	"name": "Untitled",
+	"ownedElements": [
+		{
+			"_type": "UMLModel",
+			"_id": "AAAAAAFF+qBWK6M3Z8Y=",
+			"_parent": {
+				"$ref": "AAAAAAFF+h6SjaM2Hec="
+			},
+			"name": "Model",
+			"ownedElements": [
+				{
+					"_type": "UMLClassDiagram",
+					"_id": "AAAAAAFF+qBtyKM79qY=",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "Main",
+					"defaultDiagram": true,
+					"ownedViews": [
+						{
+							"_type": "UMLClassView",
+							"_id": "AAAAAAGHgFu4vRwJFJA=",
+							"_parent": {
+								"$ref": "AAAAAAFF+qBtyKM79qY="
+							},
+							"model": {
+								"$ref": "AAAAAAGHgFu4uhwHnZk="
+							},
+							"subViews": [
+								{
+									"_type": "UMLNameCompartmentView",
+									"_id": "AAAAAAGHgFu4vRwKttk=",
+									"_parent": {
+										"$ref": "AAAAAAGHgFu4vRwJFJA="
+									},
+									"model": {
+										"$ref": "AAAAAAGHgFu4uhwHnZk="
+									},
+									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGHgFu4vRwLCuE=",
+											"_parent": {
+												"$ref": "AAAAAAGHgFu4vRwKttk="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": 96,
+											"top": 96,
+											"height": 13
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGHgFu4vhwMWgw=",
+											"_parent": {
+												"$ref": "AAAAAAGHgFu4vRwKttk="
+											},
+											"font": "Arial;13;1",
+											"left": 205,
+											"top": 415,
+											"width": 131.47265625,
+											"height": 13,
+											"text": "Empresa_Condorcito"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGHgFu4vhwNpG8=",
+											"_parent": {
+												"$ref": "AAAAAAGHgFu4vRwKttk="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": 96,
+											"top": 96,
+											"width": 73.67724609375,
+											"height": 13,
+											"text": "(from Model)"
+										},
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGHgFu4vhwOkQ4=",
+											"_parent": {
+												"$ref": "AAAAAAGHgFu4vRwKttk="
+											},
+											"visible": false,
+											"font": "Arial;13;0",
+											"left": 96,
+											"top": 96,
+											"height": 13,
+											"horizontalAlignment": 1
+										}
+									],
+									"font": "Arial;13;0",
+									"left": 200,
+									"top": 408,
+									"width": 141.47265625,
+									"height": 25,
+									"stereotypeLabel": {
+										"$ref": "AAAAAAGHgFu4vRwLCuE="
+									},
+									"nameLabel": {
+										"$ref": "AAAAAAGHgFu4vhwMWgw="
+									},
+									"namespaceLabel": {
+										"$ref": "AAAAAAGHgFu4vhwNpG8="
+									},
+									"propertyLabel": {
+										"$ref": "AAAAAAGHgFu4vhwOkQ4="
+									}
+								},
+								{
+									"_type": "UMLAttributeCompartmentView",
+									"_id": "AAAAAAGHgFu4vhwP9cE=",
+									"_parent": {
+										"$ref": "AAAAAAGHgFu4vRwJFJA="
+									},
+									"model": {
+										"$ref": "AAAAAAGHgFu4uhwHnZk="
+									},
+									"font": "Arial;13;0",
+									"left": 200,
+									"top": 433,
+									"width": 141.47265625,
+									"height": 10
+								},
+								{
+									"_type": "UMLOperationCompartmentView",
+									"_id": "AAAAAAGHgFu4vxwQGgE=",
+									"_parent": {
+										"$ref": "AAAAAAGHgFu4vRwJFJA="
+									},
+									"model": {
+										"$ref": "AAAAAAGHgFu4uhwHnZk="
+									},
+									"font": "Arial;13;0",
+									"left": 200,
+									"top": 443,
+									"width": 141.47265625,
+									"height": 10
+								},
+								{
+									"_type": "UMLReceptionCompartmentView",
+									"_id": "AAAAAAGHgFu4vxwRKR8=",
+									"_parent": {
+										"$ref": "AAAAAAGHgFu4vRwJFJA="
+									},
+									"model": {
+										"$ref": "AAAAAAGHgFu4uhwHnZk="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": 48,
+									"top": 48,
+									"width": 10,
+									"height": 10
+								},
+								{
+									"_type": "UMLTemplateParameterCompartmentView",
+									"_id": "AAAAAAGHgFu4wBwSq80=",
+									"_parent": {
+										"$ref": "AAAAAAGHgFu4vRwJFJA="
+									},
+									"model": {
+										"$ref": "AAAAAAGHgFu4uhwHnZk="
+									},
+									"visible": false,
+									"font": "Arial;13;0",
+									"left": 48,
+									"top": 48,
+									"width": 10,
+									"height": 10
+								}
+							],
+							"font": "Arial;13;0",
+							"containerChangeable": true,
+							"left": 200,
+							"top": 408,
+							"width": 141.47265625,
+							"height": 45,
+							"nameCompartment": {
+								"$ref": "AAAAAAGHgFu4vRwKttk="
+							},
+							"attributeCompartment": {
+								"$ref": "AAAAAAGHgFu4vhwP9cE="
+							},
+							"operationCompartment": {
+								"$ref": "AAAAAAGHgFu4vxwQGgE="
+							},
+							"receptionCompartment": {
+								"$ref": "AAAAAAGHgFu4vxwRKR8="
+							},
+							"templateParameterCompartment": {
+								"$ref": "AAAAAAGHgFu4wBwSq80="
+							}
+						}
+					]
+				},
+				{
+					"_type": "UMLClass",
+					"_id": "AAAAAAGHgFu4uhwHnZk=",
+					"_parent": {
+						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
+					},
+					"name": "Empresa_Condorcito"
+				}
+			]
+		}
+	]
+}

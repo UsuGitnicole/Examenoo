@@ -1,0 +1,132 @@
+Examen corrección::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+*ejercicio 2 
+	+utilizar this 
+	+crear los getters y setter 
+	+
+			
+variable statica 
+
+Atajos:
+para crear objeto si es igual: boton derecho-generator-source-
+Para gecaer permisos 
+repasarse los objetos en java y los getters y setters
+revisar los booleans y los this 
+revisar creacion de metodos 
+revisare atajos para crear constructores de los datos de manerapida
+omo convertir numero a string: 
+	String numcaddena=String.valueOf(Math.abs(numero))
+
+
+
+Ejercicio de herencia:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::.
+
+*Herencia: definicion de una clase a partir de la def de otra ya existente.Permite compartir automaticamnete
+metodos y datos entre clases, consiste en sacar factor común.
+
++paradigma: conjunto de teorias y metodos que juntos representan una forma de organixar el conocimiento
+
+
+Clase padre o superclase || Clases hijas:::::::::::::::::::.................................
+
+	*clase con un codigo en comun a las demas clases ya quen se repite la misma estructura de codigo en las tres.
+	
+	*Clases hijas herederan de la clase padre tods los atributos y ,etodos publics o protegidos pero no heredanç
+	los atributos y metodos privados de la clase padre.
+	
+	*public class name_clase_hija extends name_clase_padre: 
+		+Extends: para que una clase hereda de otra, se coloca tras el nombre de la clase.
+		+Protected: para indicar un tipo de visibilidad, solo es visible ese atr/met desde una de las clasea
+		hijas y no desde otra clase.
+		+Super: para acceder a los miembros de la superclase, es decir para llamar al constructor de superclase
+
+	*Clase enum: es una clase especial que permite representar un nombre simbolico a un conjunto de valores
+	separados por comas. en mayuculas recomendado.Hacerlos siempr en una clase aparte.
+	
+	*Para el formato de los objetos del ejercicio Multimedia se crea una clase de tipo enumerado de nombre Formato
+	 (enum) con los valores indicados anteriormente.
+
+	*Es mejor hacer las clases en diferentes archivos
+	saber atajos de java para crear metodos o clases o enum, formato.
+		constructor lista[];
+
+	*Que hace throw new en java
+	//La sentencia throw se utiliza para lanzar explicitamente una excepción.
+	throw new IndexOutOfBoundsException();
+	//¿Qué es Indexoutofboundsexception?
+	indica que el indice pasado como parametro está fuera de rango
+	//indica que el valor esta fuera de los limites
+	throw new IllegalArgumentException
+	Operacion:::::::::
+		
+		public Multimedia getMultimedia(int posicion){
+		
+			if(posicion<0||posicion>=contador)
+			throw new IndexOutOfBoundsException();
+		  	 return lista[posicion];
+		}
+	*Para comprobar cual de los elementos del vector es mayor de la tabla utilizar
+		public int mayorArray() {
+			int mayor = array[0];
+			for (int i = 1; i < array.length; i++) {
+			if (array[i] > mayor) {
+			mayor = array[i];
+			}
+		}
+		return mayor;
+		}
+	*Poliformismo 
+	*sobrecarga en java
+	
+	*instanceof: 
+	
+	*Clases abstractas que no puedes crear objetos ni utilizar new, solo se crean para
+	unificar datos u	operaciones se subclases. Si no tenemos la intencion de crear objetos, 
+	la declararemos abstracta.
+		+Los metodos bastractos:
+			-no tienen llaves solo punto y coma.
+			-solo pueden existir dentro de una clase abstracta.
+			-habrán de estar sobreescritos en las subclases.
+			SINTAXIS/////////////////////////
+			abstract public/private tipo name();
+	*Extracción de variable local : consiste en asignaruna expresión a una variable local
+	asi cualquier referencia a la expresion se sustituye por la variable
+	
+	*Cuando una variable local es creada como atributo todos los metodos tienen acceso a esa 
+	expresion de la variable, ya que si solo es declarada como variable local solo se podrá
+	utilizar dentro del metodo.
+		
+	*Cuando crear una implementacion tienens que crear todos los metodos dispionibles de la 
+	interface que haces referencia.
+	
+	*Override: redefinir los miembros para adaptarlos a la nueva clase o ampliarlos
+
+	*ArrayList
+	
+
+
+
+
+
+
+
+ejercicios del 1 al 3.
+
+1::::::::::::::::::::::::::::..
+//almacenar informacion en clase muktimedia de 
+private String titulo;
+    private String autor;
+    private Formato formato;
+    private double duracion;
+//clase que contiene titulo, aouror, formato y duracion como atributos
+	
+	
+Objetivos de aprender: aplicar herencia y sacar factor comun.
+
+
+
+repositorio: contiene todos los archivos del proyecto y todas sus modificaciones
+
+Git=Sistema de control de versiones
+
+
